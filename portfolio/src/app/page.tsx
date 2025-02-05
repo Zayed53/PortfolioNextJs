@@ -5,7 +5,6 @@ import confetti from "canvas-confetti";
 export default function Home() {
   const experienceRef = useRef<HTMLElement | null>(null);
   const projectsRef = useRef<HTMLElement | null>(null);
-  const contactRef = useRef<HTMLElement | null>(null);
   const aboutmeRef = useRef<HTMLElement | null>(null);
   const homeRef = useRef<HTMLElement | null>(null);
   const skillsRef = useRef<HTMLElement | null>(null);
@@ -14,7 +13,6 @@ export default function Home() {
   // State to track visibility
   const [isExperienceVisible, setExperienceVisible] = useState(false);
   const [isProjectsVisible, setProjectsVisible] = useState(false);
-  const [isContactVisible, setContactVisible] = useState(false);
   const [isAboutmeVisible, setAboutmeVisible] = useState(false);
   const [ishomeVisible, sethomeVisible] = useState(false);
   const [isSkillsVisible, setSkillsVisible] = useState(false);
@@ -24,7 +22,6 @@ export default function Home() {
     const sections = [
       { ref: experienceRef, setVisible: setExperienceVisible, threshold: 0.3 },
       { ref: projectsRef, setVisible: setProjectsVisible, threshold: 0.1 }, // Only 10% for projects
-      { ref: contactRef, setVisible: setContactVisible, threshold: 0.3 },
       { ref: aboutmeRef, setVisible: setAboutmeVisible, threshold: 0.3 },
       { ref: homeRef, setVisible: sethomeVisible, threshold: 0.3 },
       { ref: skillsRef, setVisible: setSkillsVisible, threshold: 0.3 },
