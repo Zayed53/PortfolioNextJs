@@ -163,7 +163,7 @@ export default function Home() {
             <h1 className={`text-4xl font-extrabold mt-3 transition-transform duration-1000 delay-300 ${
             ishomeVisible ? "translate-x-0" : "translate-x-full"
             }`} style={{ fontFamily: 'Titillium Web, sans-serif' }}>
-            I'm <span className="text-[#ffb600]">Zayed Hasan</span>
+            I&apos;m <span className="text-[#ffb600]">Zayed Hasan</span>
             </h1>
           <h2 className={`text-2xl font-semibold text-gray-300 mt-4 transition-transform duration-1000 delay-600 ${
             ishomeVisible ? "translate-x-0" : "translate-x-full"
@@ -381,7 +381,7 @@ export default function Home() {
                 <div className="w-full md:w-2/3 md:pl-8">
                   <h3 className="text-xl md:text-2xl font-semibold mb-2 font-serif">Thikana web</h3>
                   <p className="text-white mb-4 font-mono">
-                    My project is an all-in-one web platform designed to streamline the processes of purchasing, selling, renting, and leasing properties. It offers an efficient property search feature equipped with detailed filters and criteria, making it easier for users to find exactly what they're looking for.
+                    My project is an all-in-one web platform designed to streamline the processes of purchasing, selling, renting, and leasing properties. It offers an efficient property search feature equipped with detailed filters and criteria, making it easier for users to find exactly what they&apos;re looking for.
                   </p>
                   <div className="flex justify-between mb-4 mt-4">
                     <a href="https://github.com/Zayed53/SPL-1" className="text-primary hover:underline text-blue-300 hover:scale-105 hover:text-blue-500">GitHub</a>
