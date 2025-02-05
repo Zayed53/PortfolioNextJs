@@ -697,7 +697,7 @@ export default function Home() {
                         href="www.linkedin.com/in/zayed-hasan-654605272"
                         className="text-xl font-medium text-primary hover:underline flex items-center space-x-2 transition-transform duration-300 hover:scale-105 hover:text-blue-300"
                       >
-                        <img src="/storage/icon/linkedin.webp" alt="LinkedIn Icon" className="h-12 w-12" />
+                        <img src="/storage/icon/linkedIn.webp" alt="LinkedIn Icon" className="h-12 w-12" />
                         <span className="text-2xl font-mono">Zayed Hasan</span>
                       </a>
             </div>
