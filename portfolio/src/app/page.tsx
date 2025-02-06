@@ -17,6 +17,7 @@ export default function Home() {
   const [ishomeVisible, sethomeVisible] = useState(false);
   const [isSkillsVisible, setSkillsVisible] = useState(false);
   const [isResumeVisible, setResumeVisible] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = [
@@ -61,6 +62,8 @@ export default function Home() {
       }, 3000);
     }, []);
 
+    useEffect(() => {console.log(menuOpen)}, [menuOpen]);
+
 
   
   return (
@@ -81,9 +84,41 @@ export default function Home() {
           className="text-white lg:hidden focus:outline-none"
           type="button"
           aria-label="Toggle navigation"
-        >
-          <span className="oi oi-menu"></span> Menu
+          onClick={() => setMenuOpen(!menuOpen)}
+        >{!menuOpen  ?(<div>
+          <span className="block w-6 h-0.5 bg-white mb-1"></span>
+          <span className="block w-6 h-0.5 bg-white mb-1"></span>
+          <span className="block w-6 h-0.5 bg-white"></span> </div>):(<div className="fixed top-4 right-4 w-6 h-6 cursor-pointer">
+  <span className="absolute top-1/2 left-0 w-6 h-0.5 bg-white rotate-45"></span>
+  <span className="absolute top-1/2 left-0 w-6 h-0.5 bg-white -rotate-45"></span>
+</div>
+)}
         </button>
+        {menuOpen && (
+          <div className="lg:hidden mt-4 space-y-4">
+            <a href="#home-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Home
+            </a>
+            <a href="#about-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              About
+            </a>
+            <a href="#resume-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Resume
+            </a>
+            <a href="#experience-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Services
+            </a>
+            <a href="#skills-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Skills
+            </a>
+            <a href="#projects-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Projects
+            </a>
+            <a href="#contact-section" className="block text-xl font-bold hover:text-yellow-500 transition duration-200 ease-in-out transform hover:text-2xl font-mono">
+              Contact
+            </a>
+          </div>
+        )}
         <div className="hidden lg:flex space-x-12">
           <ul className="flex flex-col lg:flex-row items-center lg:space-x-12">
             <li className="nav-item">
@@ -134,7 +169,7 @@ export default function Home() {
 
 
       {/* Main Section */}
-      <main className="container mx-auto px-4 md:px-8 py-10 space-y-20">
+      <main className={`container mx-auto px-4 md:px-8 py-10 space-y-20 w-full max-w-screen overflow-hidden transition-transform duration-300 ${menuOpen ? 'transform translate-y-64' : ''}`}>
         {/* Hero Section */}
         {/* <section id="home-section" className="hero bg-black text-white h-screen flex items-center transition-opacity duration-700 ease-in-out opacity-0 hover:opacity-100 transform hover:scale-105"> */}
         <section
@@ -697,7 +732,7 @@ export default function Home() {
                         href="www.linkedin.com/in/zayed-hasan-654605272"
                         className="text-xl font-medium text-primary hover:underline flex items-center space-x-2 transition-transform duration-300 hover:scale-105 hover:text-blue-300"
                       >
-                        <img src="/storage/icon/linkedin.webp" alt="LinkedIn Icon" className="h-12 w-12" />
+                        <img src="/storage/icon/linkedIn.webp" alt="LinkedIn Icon" className="h-12 w-12" />
                         <span className="text-2xl font-mono">Zayed Hasan</span>
                       </a>
             </div>
