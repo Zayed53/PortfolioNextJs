@@ -668,7 +668,6 @@ export default function Home() {
               <img src="/storage/icon/postgre.webp" alt="PostgreSql" className="h-24 w-24 rounded-lg animate-shake" />
               <img src="/storage/icon/git.png" alt="GitHub" className="h-24 w-24 rounded-lg animate-shake" />
             </div>
-
           </div>
         </section>
         {/* Contact Me Section */}
